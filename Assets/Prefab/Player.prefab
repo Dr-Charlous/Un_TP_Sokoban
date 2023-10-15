@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5086157839491460664}
   - component: {fileID: 5394609473056411058}
-  - component: {fileID: 1563181441858478908}
+  - component: {fileID: 6797197656335320061}
+  - component: {fileID: 6548351128256542498}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -432620884, guid: 9654230b50509cd47ad71423af6bb775, type: 3}
+  m_Sprite: {fileID: -74256335, guid: 9654230b50509cd47ad71423af6bb775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +86,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1563181441858478908
+--- !u!114 &6797197656335320061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233171187401481144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 925b8c9d14dca2346ba4825dad70dbb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneLoader: {fileID: 0}
+  PlayerPos: {x: 0, y: 0}
+--- !u!114 &6548351128256542498
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,4 +112,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8468af4f8c734ba32f092031d30be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: 4

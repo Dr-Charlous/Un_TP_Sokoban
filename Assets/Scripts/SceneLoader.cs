@@ -1,5 +1,8 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
+using static Categories;
 
 [Serializable]
 public class Placement
@@ -15,13 +18,18 @@ public class SceneLoader : MonoBehaviour
     public TextAsset Levels;
     public Placement[] Placements;
     string[] Lines;
+    [SerializeField] TileBase Floor;
+    [SerializeField] Tilemap FloorTileMap;
 
     //Data Load
-    public bool[,] Walls = new bool[1, 1];
+    public Categories[,] DataGrid;
+    public int SizeX = 0;
+    public int SizeY = 0;
 
     private void Start()
     {
         Lines = Levels.text.Split("\n");
+        DataGrid = new Categories[SizeX, SizeY];
 
         for (int i = 0; i < Lines.Length; i++)
         {
@@ -29,9 +37,15 @@ public class SceneLoader : MonoBehaviour
             {
                 foreach (var item in Placements)
                 {
-                    if (Lines[i][j] == item.Value && item.PrefabBlock != null)
+                    if (Lines[i][j] == item.Value)
                     {
-                        Instantiate(item.PrefabBlock, new Vector3(j, -i), Quaternion.identity, item.Parent);
+                        if (item.PrefabBlock != null)
+                        {
+                            GameObject Object = Instantiate(item.PrefabBlock, new Vector3(j, -i), Quaternion.identity, item.Parent);
+                            DataGrid[j, i] = Object.GetComponent<Categories>();
+                        }
+
+                        FloorTileMap.SetTile(new Vector3Int(j, -i), Floor);
                     }
                 }
             }

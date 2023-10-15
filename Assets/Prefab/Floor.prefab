@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5394609473056411058}
   - component: {fileID: 1563181441858478908}
   m_Layer: 0
-  m_Name: Wall
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -432620884, guid: 9654230b50509cd47ad71423af6bb775, type: 3}
+  m_SortingOrder: -1
+  m_Sprite: {fileID: -1673421523, guid: 9654230b50509cd47ad71423af6bb775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,4 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e8468af4f8c734ba32f092031d30be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 1
+  state: 0
