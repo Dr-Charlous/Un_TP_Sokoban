@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.UpArrow)) 
         {
-            if (DataGrid[PlayerPos.x, PlayerPos.y - 1].state != BlockState.Wall)
+            if (DataGrid[PlayerPos.x, PlayerPos.y - 1] == null || DataGrid[PlayerPos.x, PlayerPos.y - 1].state != BlockState.Wall)
             {
                 PlayerPos = new Vector3Int(PlayerPos.x, -PlayerPos.y + 1);
                 transform.position = PlayerPos;
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            if (DataGrid[PlayerPos.x, PlayerPos.y + 1].state != BlockState.Wall)
+            if (DataGrid[PlayerPos.x, PlayerPos.y + 1] == null || DataGrid[PlayerPos.x, PlayerPos.y + 1].state != BlockState.Wall)
             {
                 PlayerPos = new Vector3Int(PlayerPos.x, -PlayerPos.y - 1);
                 transform.position = PlayerPos;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            if (DataGrid[PlayerPos.x + 1, PlayerPos.y].state != BlockState.Wall)
+            if (DataGrid[PlayerPos.x + 1, PlayerPos.y] == null || DataGrid[PlayerPos.x + 1, PlayerPos.y].state != BlockState.Wall)
             {
                 PlayerPos = new Vector3Int(PlayerPos.x + 1, -PlayerPos.y);
                 transform.position = PlayerPos;
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            if (DataGrid[PlayerPos.x - 1, PlayerPos.y].state != BlockState.Wall)
+            if (DataGrid[PlayerPos.x - 1, PlayerPos.y] == null || DataGrid[PlayerPos.x - 1, PlayerPos.y].state != BlockState.Wall)
             {
                 PlayerPos = new Vector3Int(PlayerPos.x - 1, -PlayerPos.y);
                 transform.position = PlayerPos;
