@@ -99,7 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneLoader: {fileID: 0}
-  PlayerPos: {x: 0, y: 0}
+  PlayerPos: {x: 0, y: 0, z: 0}
+  Speed: 0.2
+  Snapping: 0
 --- !u!114 &6548351128256542498
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,4 +14,14 @@ public class Categories : MonoBehaviour
     }
 
     public BlockState state;
+
+    public enum ColorCheck
+    {
+        None,
+        Blue,
+        Red,
+        Green
+    }
+
+    public ColorCheck check;
 }

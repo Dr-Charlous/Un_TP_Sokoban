@@ -397,7 +397,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -473,21 +473,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b9ac51cf6cd5a34db67c95c20ddbb75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cam: {fileID: 519420031}
+  OffSetX: 1
+  OffSetY: 0.5
   Levels: {fileID: 4900000, guid: 9269c8ffd7d608b4cbc92884fa050531, type: 3}
   Placements:
   - Value: 48
-    PrefabBlock: {fileID: 0}
-    Parent: {fileID: 0}
+    PrefabBlock: {fileID: 1233171187401481144, guid: 37275a6c94b40a841b54b253567d40f6, type: 3}
+    Parent: {fileID: 926382272}
   - Value: 49
     PrefabBlock: {fileID: 1233171187401481144, guid: 39bc0e91359e9724881908bdb64758bf, type: 3}
     Parent: {fileID: 1708598294}
   - Value: 83
     PrefabBlock: {fileID: 1233171187401481144, guid: 458e274e227b5fa418c05dc2ff005218, type: 3}
     Parent: {fileID: 1936060243}
+  - Value: 65
+    PrefabBlock: {fileID: 1233171187401481144, guid: 638d734b613e97147ac995339582e15c, type: 3}
+    Parent: {fileID: 1936060243}
+  - Value: 66
+    PrefabBlock: {fileID: 1233171187401481144, guid: af36edb15f9734b4797c5b91484e8036, type: 3}
+    Parent: {fileID: 1936060243}
   Floor: {fileID: 11400000, guid: 1e514da37368f0e43809b994a6431fd0, type: 2}
   FloorTileMap: {fileID: 1831668907}
-  SizeX: 11
-  SizeY: 8
+  SizeX: 0
+  SizeY: 0
 --- !u!4 &1936060243
 Transform:
   m_ObjectHideFlags: 0
